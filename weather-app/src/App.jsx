@@ -21,20 +21,20 @@ function App() {
 
   useEffect(() => {
     if (weatherData) {
-      console.log(weatherData)
+      //console.log(weatherData)
       setCurrentWeather(weatherData.weather[0].main);
       setImage(weatherData.weather[0].icon)
     }
   }, [weatherData])
   
   const handleLocationUpdate = async ({ lat, lon }, city, times) => {
-    console.log(lat, lon)
+    //console.log(lat, lon)
     setCity(city);
     const data = await fetchWeatherData({ lat, lon })
     setWeatherData(data);
     const utc = curr_time();
     setTime(utc+Math.floor(data.timezone/3600));
-    console.log(times)
+    //console.log(times)
   };
 
   return (

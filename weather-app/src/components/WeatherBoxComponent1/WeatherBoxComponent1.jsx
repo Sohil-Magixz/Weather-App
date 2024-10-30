@@ -13,7 +13,7 @@ function WeatherBoxComponent1({prop}){
 
 
         if(prop.time>6 && prop.time<18){
-            console.log(prop.weather)
+            //console.log(prop.weather)
             if(prop.weather=="Clouds" || prop.weather=="Haze"){
                 color = " bg-blue-500"
             }
@@ -46,7 +46,7 @@ function WeatherBoxComponent1({prop}){
 
         setTheme(" text-end flex flex-col justify-end rounded-2xl p-3 bg-contain bg-no-repeat bg-center"+color);
         setBgimage(weathericon) 
-        console.log(theme);
+        //console.log(theme);
         const fetchIcon = async () => {
             if(prop.icon){
                 const response = await fetch(`https://openweathermap.org/img/wn/${prop.icon}@2x.png`)

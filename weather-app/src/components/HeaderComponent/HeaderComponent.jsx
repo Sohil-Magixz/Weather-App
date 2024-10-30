@@ -13,7 +13,7 @@ function HeaderComponent({ onLocationUpdate ,times}) {
 
         if(times){
             times=times%24
-            console.log(times)
+            //console.log(times)
             if(times>18 || times<6){
                 setHeaderTheme(headerDefault+" bg-black")
             }
@@ -40,7 +40,7 @@ function HeaderComponent({ onLocationUpdate ,times}) {
                     <button type="submit" className="px-2 py-1.5 ml-2 rounded-2xl bg-white text-teal-950" onClick={async () => {
                         if (city != undefined) {
                             let locationData = await geoCodingApi(city);
-                            console.log(locationData)
+                            //console.log(locationData)
                             if (locationData) {
                                 onLocationUpdate(locationData, city, times);
                             }
