@@ -6,7 +6,7 @@ async function fetchWeatherData({lat, lon}){
     try {
         const response = await fetch(url);
         if(!response.ok){
-            throw new Error('Error: ${response.status}');
+            throw new Error(`Error: ${response.status}`);
         }
         else{
             const data = await response.json();
