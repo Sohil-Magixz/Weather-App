@@ -49,7 +49,10 @@ function HeaderComponent({ onLocationUpdate ,times}) {
                     }}>Search</button>
                 </div>
                 <div className="w-[162.4px] sm:flex hidden">
-                    Time:
+                    Time:  
+                    <p id="hr">00</p>:
+                    <p id="min">00</p>:
+                    <p id="sec">00</p>
                 </div>
 
             </div>

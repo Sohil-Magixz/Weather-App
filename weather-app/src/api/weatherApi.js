@@ -10,6 +10,7 @@ async function fetchWeatherData({lat, lon}){
         }
         else{
             const data = await response.json();
+            console.log(data);
             return data;
         }
     }

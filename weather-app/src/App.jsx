@@ -34,7 +34,7 @@ function App() {
     setWeatherData(data);
     const utc = curr_time();
     setTime(utc+Math.floor(data.timezone/3600));
-    //console.log(times)
+    console.log(time)
   };
 
   return (
