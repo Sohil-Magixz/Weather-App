@@ -14,7 +14,7 @@ function MainComponent({ onWeatherUpdate, name, times ,weather, icon}) {
 
     useEffect(() => {
         if (onWeatherUpdate) {
-            console.log(onWeatherUpdate);
+            // console.log(onWeatherUpdate);
             setCity(name)
             setTemp(onWeatherUpdate.main.temp)
             setFeels_like(onWeatherUpdate.main.feels_like)

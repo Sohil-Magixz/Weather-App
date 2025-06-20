@@ -9,10 +9,10 @@ function WeatherBoxComponent2({ latte, lonne }) {
         if (latte && lonne) {
             const newSrc = `https://www.openstreetmap.org/search?lat=13.1818&lon=80.0038#map=11/13.1818/80.0042`;
             setSrc(newSrc);
-            console.log("Updated src:", newSrc);
+            // console.log("Updated src:", newSrc);
         }
     }, [latte, lonne]);
-    console.log(latte,lonne,src)
+    // console.log(latte,lonne,src)
     return (<>
     <iframe 
         src={src}

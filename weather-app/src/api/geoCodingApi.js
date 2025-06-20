@@ -13,7 +13,7 @@ async function geoCodingApi(name){
                 lat: data[0].lat,
                 lon: data[0].lon
             };
-            console.log(Data);
+            // console.log(Data);
             return Data;
         }
     }
