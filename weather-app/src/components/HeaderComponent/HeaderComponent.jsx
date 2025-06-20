@@ -49,10 +49,7 @@ function HeaderComponent({ onLocationUpdate ,times}) {
                     }}>Search</button>
                 </div>
                 <div className="w-[162.4px] sm:flex hidden">
-                    Time:  
-                    <p id="hr">00</p>:
-                    <p id="min">00</p>:
-                    <p id="sec">00</p>
+                    <a href="https://linkedin.com/in/sohil-lochan" target="_blank" className="hover:underline">Contact Developer</a>
                 </div>
 
             </div>

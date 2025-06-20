@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import WeatherBoxComponent1 from "../WeatherBoxComponent1/WeatherBoxComponent1.jsx";
+import WeatherBoxComponent2 from "../WeatherBoxComponent2/WeatherBoxComponent2.jsx";
 
 function MainComponent({ onWeatherUpdate, name, times ,weather, icon}) {
     const [temp, setTemp] = useState(0);
@@ -8,21 +9,25 @@ function MainComponent({ onWeatherUpdate, name, times ,weather, icon}) {
     const [temp_max, setTemp_max] = useState(0);
     const [city, setCity] = useState(0);
     const [time,setTime ] = useState(0);
-
+    const [lat, setLat] = useState();
+    const [lon,setLon] = useState();
 
     useEffect(() => {
         if (onWeatherUpdate) {
+            console.log(onWeatherUpdate);
             setCity(name)
             setTemp(onWeatherUpdate.main.temp)
             setFeels_like(onWeatherUpdate.main.feels_like)
             setTemp_min(onWeatherUpdate.main.temp_min)
             setTemp_max(onWeatherUpdate.main.temp_max)
             setTime(times)
+            setLat(onWeatherUpdate.coord.lat);
+            setLon(onWeatherUpdate.coord.lon);
         }
     }, [onWeatherUpdate, name,icon])
     return (
         <>
-            <div className=" h-screen w-screen  mx-auto bg-blue-100 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-3 md:grid-cols-2 m3 p-3" /*style={{backgroundImage:`url(${image})`>}}*/>
+            <div className=" h-screen w-screen  mx-auto bg-blue-100 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-3 md:grid-cols-2 m3 p-3">
                 <WeatherBoxComponent1
                     prop={{
                         temp: temp,
@@ -35,12 +40,6 @@ function MainComponent({ onWeatherUpdate, name, times ,weather, icon}) {
                         icon: icon
                     }}
                 />            
-                <div className="h-[30vh] bg-red-600 rounded-2xl p-3">
-                    Component - 2 - Other details
-                </div>
-                <div className="bg-black rounded-2xl text-white p-3">
-                    Component 3
-                </div>
             </div>
         </>
     )

@@ -60,7 +60,7 @@ function WeatherBoxComponent1({prop}){
     
     return(
         <>
-        <div className={theme+" h-auto"}>
+        <div className={theme+" h-[80vh] sm:w-[201%]"}>
             <div className={theme+" h-[100px]"} style={{backgroundImage: `url(${bgimage})`}}>
             </div>
                 <div className="bg-[rgba(0,0,0,0.3)] text-white rounded-2xl p-3 overflow-auto">
